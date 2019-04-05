@@ -1,0 +1,1 @@
+{"directed": true, "multigraph": false, "graph": {}, "nodes": [{"type": "repo", "lang": "JavaScript", "id": "sec-crawl(repo)"}, {"type": "user", "id": "bobctr(user)"}], "links": [{"type": "creator", "source": "bobctr(user)", "target": "sec-crawl(repo)"}]}
