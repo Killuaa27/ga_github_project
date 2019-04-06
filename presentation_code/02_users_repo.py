@@ -33,7 +33,20 @@ for sg in stargazers:
 
 # Showing the graph
 import matplotlib.pyplot as plt
-nx.draw(g)
+node_map = []
+for node in g:
+    if "repo" in node:
+        node_map.append('#fcb383')
+    elif "user" in node:
+        node_map.append('#f44141')
+
+edge_map = []
+for edge in g.edges():
+    if ("user" in edge[0]) and ("repo" in edge[1]):
+        edge_map.append('grey')
+    elif ("user" in edge[0]) and ("user" in edge[1]):
+        edge_map.append('#f442b6')
+nx.draw(g, node_color = node_map, edge_color = edge_map, with_labels = True)
 plt.show()
 
 # Saving graph
